@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   const locations = [
     { name: "Costa del Sol", href: "/locations/costa-del-sol" },
@@ -11,6 +13,15 @@ export default function Home() {
     { name: "Estepona", href: "/locations/estepona" },
     { name: "Sotogrande", href: "/locations/sotogrande" },
     { name: "La Cala de Mijas", href: "/locations/la-cala-de-mijas" },
+  ];
+
+  const galleryImages = [
+    { src: "/doors/door-01.jpg", alt: "Bespoke security entrance door installation" },
+    { src: "/doors/door-02.jpg", alt: "Security front door with glazed detailing" },
+    { src: "/doors/door-03.jpg", alt: "High security door with contemporary panel design" },
+    { src: "/doors/door-04.jpg", alt: "Security door set within rendered villa facade" },
+    { src: "/doors/door-05.jpg", alt: "Security door with side light panel" },
+    { src: "/doors/door-06.jpg", alt: "Reinforced entrance door in modern apartment building" },
   ];
 
   return (
@@ -30,6 +41,33 @@ export default function Home() {
           completion.
         </p>
       </header>
+
+      <section className="space-y-4">
+        <h2 className="text-xl font-semibold tracking-tight text-zinc-900">
+          Selected installations
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {galleryImages.map((image) => (
+            <div key={image.src} className="space-y-2 text-sm">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(min-width: 1024px) 200px, (min-width: 640px) 45vw, 100vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <p className="text-xs text-zinc-600">{image.alt}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-zinc-500">
+          Every door is specified and installed as part of the structural
+          security of the property, rather than as standard joinery.
+        </p>
+      </section>
 
       <section className="space-y-4">
         <h2 className="text-xl font-semibold tracking-tight text-zinc-900">
@@ -54,7 +92,10 @@ export default function Home() {
         </h2>
         <ul className="list-disc space-y-2 pl-5 text-zinc-700">
           <li>Front entrance security doors for villas and apartments</li>
-          <li>Terrace and secondary access doors, engineered to resist forced entry</li>
+          <li>
+            Terrace and secondary access doors, engineered to resist forced
+            entry
+          </li>
           <li>Safe room doors and conversions for families and high‑value assets</li>
           <li>Internal door upgrades to create controlled security zones</li>
           <li>Optional discreet access control and biometric integration</li>

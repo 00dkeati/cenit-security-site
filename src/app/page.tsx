@@ -28,18 +28,22 @@ export default function Home() {
     {
       title: "Front Entrance",
       description: "Bespoke security doors engineered to the highest standards, seamlessly integrated with your property's architecture.",
+      href: "/services/front-entrance",
     },
     {
       title: "Terrace & Secondary Access",
       description: "Reinforced access points that maintain aesthetic elegance whilst providing complete peace of mind.",
+      href: "/services/terrace-access",
     },
     {
       title: "Safe Rooms",
       description: "Discreet panic room installations and conversions, protecting what matters most.",
+      href: "/services/safe-rooms",
     },
     {
       title: "Access Control",
       description: "Biometric systems and smart integration, designed for effortless security.",
+      href: "/services/biometric-access",
     },
   ];
 
@@ -167,8 +171,9 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={service.title}
+                href={service.href}
                 className="group p-8 border border-[#2a2a2a] hover:border-[#c9a961]/30 transition-colors duration-500"
               >
                 <div className="font-sans text-[#c9a961] text-xs tracking-[0.2em] uppercase mb-4">
@@ -180,7 +185,7 @@ export default function Home() {
                 <p className="text-[#f5f0e8]/60 leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -52,8 +52,8 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/80 to-transparent">
         <div className="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
-          <div className="text-[#c9a961] font-sans text-xs tracking-[0.3em] uppercase">
-            Cenit Security
+          <div className="font-sans text-xs tracking-[0.2em] uppercase">
+            <span className="text-[#c9a961]">Cenit</span> <span className="text-[#f5f0e8]/60">Security</span> <span className="text-[#f5f0e8]">Doors</span>
           </div>
           <div className="hidden md:flex items-center gap-8 font-sans text-xs tracking-[0.15em] uppercase text-[#f5f0e8]/80">
             <a href="#installations" className="hover:text-[#c9a961] transition-colors">Portfolio</a>
@@ -266,7 +266,7 @@ export default function Home() {
                 Get in Touch
               </p>
               <h2 className="text-4xl font-light mb-8">
-                Begin Your Consultation
+                Request Information
               </h2>
               <p className="text-[#f5f0e8]/60 leading-relaxed mb-12">
                 Whether you&apos;re securing a new property or upgrading existing installations, we provide expert guidance tailored to your specific requirements.
@@ -274,11 +274,7 @@ export default function Home() {
               <div className="space-y-6">
                 <div>
                   <p className="font-sans text-xs tracking-[0.2em] uppercase text-[#c9a961] mb-2">Email</p>
-                  <p className="text-xl">enquiries@cenitsecurity.com</p>
-                </div>
-                <div>
-                  <p className="font-sans text-xs tracking-[0.2em] uppercase text-[#c9a961] mb-2">Telephone</p>
-                  <p className="text-xl">+34 951 XXX XXX</p>
+                  <p className="text-xl">info@cenitsecurity.com</p>
                 </div>
                 <div>
                   <p className="font-sans text-xs tracking-[0.2em] uppercase text-[#c9a961] mb-2">Coverage</p>
@@ -287,45 +283,53 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-[#1a1a1a] p-10">
+              <h3 className="text-2xl font-light text-center mb-8">Request Information</h3>
               <form className="space-y-6">
                 <div>
-                  <label className="block font-sans text-xs tracking-[0.2em] uppercase text-[#f5f0e8]/60 mb-3">
-                    Name
-                  </label>
                   <input
                     type="text"
-                    className="w-full bg-transparent border-b border-[#2a2a2a] py-3 text-lg focus:border-[#c9a961] outline-none transition-colors"
+                    placeholder="Name"
+                    className="w-full bg-transparent border border-[#2a2a2a] px-4 py-4 text-base focus:border-[#c9a961] outline-none transition-colors placeholder:text-[#f5f0e8]/40"
                   />
                 </div>
                 <div>
-                  <label className="block font-sans text-xs tracking-[0.2em] uppercase text-[#f5f0e8]/60 mb-3">
-                    Email
-                  </label>
                   <input
                     type="email"
-                    className="w-full bg-transparent border-b border-[#2a2a2a] py-3 text-lg focus:border-[#c9a961] outline-none transition-colors"
+                    placeholder="Email"
+                    className="w-full bg-transparent border border-[#2a2a2a] px-4 py-4 text-base focus:border-[#c9a961] outline-none transition-colors placeholder:text-[#f5f0e8]/40"
                   />
                 </div>
                 <div>
-                  <label className="block font-sans text-xs tracking-[0.2em] uppercase text-[#f5f0e8]/60 mb-3">
-                    Property Location
-                  </label>
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    className="w-full bg-transparent border border-[#2a2a2a] px-4 py-4 text-base focus:border-[#c9a961] outline-none transition-colors placeholder:text-[#f5f0e8]/40"
+                  />
+                </div>
+                <div>
                   <input
                     type="text"
-                    className="w-full bg-transparent border-b border-[#2a2a2a] py-3 text-lg focus:border-[#c9a961] outline-none transition-colors"
+                    placeholder="Property Location"
+                    className="w-full bg-transparent border border-[#2a2a2a] px-4 py-4 text-base focus:border-[#c9a961] outline-none transition-colors placeholder:text-[#f5f0e8]/40"
                   />
                 </div>
                 <div>
-                  <label className="block font-sans text-xs tracking-[0.2em] uppercase text-[#f5f0e8]/60 mb-3">
-                    Message
-                  </label>
                   <textarea
                     rows={4}
-                    className="w-full bg-transparent border-b border-[#2a2a2a] py-3 text-lg focus:border-[#c9a961] outline-none transition-colors resize-none"
+                    placeholder="Tell us about your property and the level of security required"
+                    className="w-full bg-transparent border border-[#2a2a2a] px-4 py-4 text-base focus:border-[#c9a961] outline-none transition-colors resize-none placeholder:text-[#f5f0e8]/40"
                   />
                 </div>
-                <button type="submit" className="btn-luxury w-full mt-8">
-                  Send Enquiry
+                <div className="border border-dashed border-[#2a2a2a] p-6 text-center">
+                  <svg className="w-8 h-8 mx-auto mb-3 text-[#c9a961]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                  </svg>
+                  <p className="text-[#f5f0e8]/70 mb-1">Attach plans, drawings or photos</p>
+                  <p className="text-sm text-[#f5f0e8]/40">Drag & drop your files here or <span className="text-[#c9a961]">browse</span> (Max 200 MB)</p>
+                  <input type="file" className="hidden" multiple accept="image/*,.pdf,.dwg" />
+                </div>
+                <button type="submit" className="w-full py-4 border border-[#c9a961]/30 text-[#c9a961] font-sans text-sm tracking-[0.2em] uppercase hover:bg-[#c9a961] hover:text-[#0f0f0f] transition-colors mt-4">
+                  Submit
                 </button>
               </form>
             </div>
@@ -336,11 +340,11 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 px-8 border-t border-[#1a1a1a]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-[#c9a961] font-sans text-xs tracking-[0.3em] uppercase">
-            Cenit Security
+          <div className="font-sans text-sm tracking-[0.2em] uppercase">
+            <span className="text-[#c9a961]">Cenit</span> <span className="text-[#f5f0e8]/60">Security</span> <span className="text-[#f5f0e8]">Doors</span>
           </div>
           <p className="font-sans text-xs tracking-wide text-[#f5f0e8]/40">
-            © 2026 Cenit Security. Bespoke security solutions for distinguished properties.
+            © 2026 Cenit Security Doors. Bespoke security solutions for distinguished properties.
           </p>
         </div>
       </footer>

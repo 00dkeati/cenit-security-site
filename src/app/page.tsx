@@ -275,6 +275,92 @@ export default function Home() {
             Whether you&apos;re securing a new property or upgrading existing installations, we provide expert guidance tailored to your specific requirements.
           </p>
           
+          {/* Contact Form */}
+          <form 
+            action="https://formspree.io/f/xvgzjpvd" 
+            method="POST"
+            className="max-w-xl mx-auto text-left mb-16"
+          >
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label htmlFor="name" className="block font-sans text-xs tracking-[0.2em] uppercase text-[#c9a961] mb-3">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full bg-[#1a1a1a] border border-[#2a2a2a] px-5 py-4 text-[#f5f0e8] font-light focus:border-[#c9a961] focus:outline-none transition-colors"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label htmlFor="phone" className="block font-sans text-xs tracking-[0.2em] uppercase text-[#c9a961] mb-3">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  className="w-full bg-[#1a1a1a] border border-[#2a2a2a] px-5 py-4 text-[#f5f0e8] font-light focus:border-[#c9a961] focus:outline-none transition-colors"
+                  placeholder="+34 600 000 000"
+                />
+              </div>
+            </div>
+            <div className="mb-6">
+              <label htmlFor="email" className="block font-sans text-xs tracking-[0.2em] uppercase text-[#c9a961] mb-3">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="w-full bg-[#1a1a1a] border border-[#2a2a2a] px-5 py-4 text-[#f5f0e8] font-light focus:border-[#c9a961] focus:outline-none transition-colors"
+                placeholder="your@email.com"
+              />
+            </div>
+            <div className="mb-6">
+              <label htmlFor="location" className="block font-sans text-xs tracking-[0.2em] uppercase text-[#c9a961] mb-3">
+                Property Location
+              </label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                className="w-full bg-[#1a1a1a] border border-[#2a2a2a] px-5 py-4 text-[#f5f0e8] font-light focus:border-[#c9a961] focus:outline-none transition-colors"
+                placeholder="e.g. Marbella, Puerto Banús"
+              />
+            </div>
+            <div className="mb-8">
+              <label htmlFor="message" className="block font-sans text-xs tracking-[0.2em] uppercase text-[#c9a961] mb-3">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                required
+                className="w-full bg-[#1a1a1a] border border-[#2a2a2a] px-5 py-4 text-[#f5f0e8] font-light focus:border-[#c9a961] focus:outline-none transition-colors resize-none"
+                placeholder="Tell us about your requirements..."
+              />
+            </div>
+            <button
+              type="submit"
+              className="btn-luxury w-full text-center"
+            >
+              Send Enquiry
+            </button>
+          </form>
+
+          {/* Divider */}
+          <div className="flex items-center gap-6 max-w-xl mx-auto mb-12">
+            <div className="flex-1 h-px bg-[#2a2a2a]" />
+            <span className="font-sans text-xs tracking-[0.2em] uppercase text-[#f5f0e8]/40">Or</span>
+            <div className="flex-1 h-px bg-[#2a2a2a]" />
+          </div>
+
           {/* WhatsApp Button */}
           <a
             href="https://wa.me/34667793100?text=Hello%2C%20I%27m%20interested%20in%20security%20doors%20for%20my%20property%20in%20Costa%20del%20Sol"

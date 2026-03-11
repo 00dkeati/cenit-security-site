@@ -277,10 +277,12 @@ export default function Home() {
           
           {/* Contact Form */}
           <form 
-            action="https://formspree.io/f/xvgzjpvd" 
+            action="https://formsubmit.co/info@cenitsecurity.com" 
             method="POST"
             className="max-w-xl mx-auto text-left mb-16"
           >
+            <input type="hidden" name="_subject" value="New enquiry from Cenit Security website" />
+            <input type="hidden" name="_captcha" value="false" />
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label htmlFor="name" className="block font-sans text-xs tracking-[0.2em] uppercase text-[#c9a961] mb-3">

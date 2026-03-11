@@ -251,7 +251,7 @@ export default function Home() {
             Every project begins with a private consultation. Contact us to arrange a discreet assessment of your property.
           </p>
           <a 
-            href="https://wa.me/34600000000?text=Hello%2C%20I%27m%20interested%20in%20security%20doors%20for%20my%20property"
+            href="https://wa.me/34667793100?text=Hello%2C%20I%27m%20interested%20in%20security%20doors%20for%20my%20property"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-luxury inline-block"
@@ -277,7 +277,7 @@ export default function Home() {
           
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/34600000000?text=Hello%2C%20I%27m%20interested%20in%20security%20doors%20for%20my%20property%20in%20Costa%20del%20Sol"
+            href="https://wa.me/34667793100?text=Hello%2C%20I%27m%20interested%20in%20security%20doors%20for%20my%20property%20in%20Costa%20del%20Sol"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-4 px-10 py-5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-sans text-sm tracking-[0.15em] uppercase transition-colors"
